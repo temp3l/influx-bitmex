@@ -1,0 +1,21 @@
+{
+  "name": "influxer-bitmex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.2.0",
+    "@influxdata/influxdb-client-apis": "^1.2.0",
+    "@types/node": "^13.13.4",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "moving-average": "^1.0.0",
+    "node-fetch": "^2.6.0",
+    "technicalindicators": "^3.1.0"
+  }
+}
