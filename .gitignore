@@ -24,3 +24,4 @@ yarn-error.log*
 dist/libraries/
 .env
 lib/bitmex-wss/node_modules/
+dist/

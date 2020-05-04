@@ -13,7 +13,7 @@ export const trades2points = ({ binSize, data }) => {
       .floatField('high', trade.high)
       .floatField('low', trade.low)
       .floatField('close', trade.close)
-      .intField('trades', trade.trades)
+      .floatField('trades', trade.trades)
       .floatField('volume', trade.volume)
       .floatField('vwap', trade.vwap)
       .floatField('lastSize', trade.lastSize)
@@ -21,22 +21,6 @@ export const trades2points = ({ binSize, data }) => {
       .floatField('homeNotional', trade.homeNotional)
       .floatField('foreignNotional', trade.foreignNotional)
   )
-
-  // [{// tradeBin1m
-  //   timestamp: '2020-05-03T08:05:00.000Z',
-  //   symbol: 'XBTUSD',
-  //   open: 8987,
-  //   high: 9000,
-  //   low: 8986.5,
-  //   close: 9000,
-  //   trades: 1550,
-  //   volume: 2294374,
-  //   vwap: 8993.6145,
-  //   lastSize: 1,
-  //   turnover: 25512061318,
-  //   homeNotional: 255.12061318000002,
-  //   foreignNotional: 2294374
-  // }]
 };
 
 const getHistory = async ({ symbol, binSize }) => {

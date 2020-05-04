@@ -42,7 +42,15 @@ setInterval(function () {
   // console.log('moving average now is', ma.movingAverage());
   // console.log('moving variance now is', ma.variance());
   // console.log('moving deviation now is', ma.deviation());
-  let avg = [ma.movingAverage(), ma.variance(), ma.deviation(), ma.forecast()].map((a) => Math.round(a));
+  ////let avg = [ma.movingAverage(), ma.variance(), ma.deviation(), ma.forecast()].map((a) => Math.round(a));
   // console.log('forecast is', ma.forecast());
   console.log(ma);
 }, 500);
+
+let saample = {
+  data: { hask: 8852, book: [7, 7] },
+  diffs: { diff1: 1479, diff3: 2470, diff7: 2652 },
+
+  askAvgs: { curr: 4404, mavg: 2907, dev: 1317 }, // 1400
+  bidAvgs: { curr: 1752, mavg: 4106, dev: 1487 }, // 2300
+};

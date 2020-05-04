@@ -64,22 +64,9 @@ export const handleLiveData = async (writeApi) => {
   const onTradeBin = ({ binSize, data: quote }) => {
     if (!quote || !quote.timestamp) return console.log(quote);
     // prettier-ignore
-    writeApi.writePoint(new Point('candles')
-      .timestamp(new Date(quote.timestamp))
-      .tag('symbol', quote.symbol)
-      .tag('binSize', binSize)
-      .floatField('open', quote.open)
-      .floatField('open', quote.open)
-      .floatField('high', quote.high)
-      .floatField('low', quote.low)
-      .floatField('close', quote.close)
-      .intField('trades', quote.trades)
-      .floatField('volume', quote.volume)
-      .floatField('vwap', quote.vwap)
-      .floatField('lastSize', quote.lastSize)
-      .floatField('turnover', quote.turnover)
-      .floatField('homeNotional', quote.homeNotional)
-      .floatField('foreignNotional', quote.foreignNotional));
+    console.log(new Date(quote.timestamp));
+
+    writeApi.writePoint(new Point('candles').timestamp(new Date(quote.timestamp)).tag('symbol', quote.symbol).tag('binSize', binSize).floatField('open', quote.open).floatField('open', quote.open).floatField('high', quote.high).floatField('low', quote.low).floatField('close', quote.close).floatField('trades', quote.trades).floatField('volume', quote.volume).floatField('vwap', quote.vwap).floatField('lastSize', quote.lastSize).floatField('turnover', quote.turnover).floatField('homeNotional', quote.homeNotional).floatField('foreignNotional', quote.foreignNotional));
 
     //console.log(`added ${points.length} points to ${binSize} ticks`);
   };

@@ -2,7 +2,6 @@ require('dotenv').config();
 import { InfluxDB, Point, HttpError, WritePrecision } from '@influxdata/influxdb-client';
 import { fetchMex } from './lib/bitmex-history';
 import { handleLiveData } from './lib/bitmex-wss/example';
-
 const { url, token, org, bucket } = process.env;
 const writeApi = new InfluxDB({ url, token, writeOptions: { batchSize: 1500, flushInterval: 1000 * 3 } }).getWriteApi(org, bucket);
 writeApi.useDefaultTags({ location: 'bitmex' }); //writeApi.close().then(() => console.log('Points flushed')).catch(console.log);
@@ -24,3 +23,7 @@ let foo = handleLiveData(writeApi);
 // let tradeVol1m = `select moving_average(sum("price"), 20) from XBTUSD_trade WHERE time >= now()-4h GROUP BY time(10s) ORDER BY ASC`;
 // let statsd = `select moving_average(mean("vol"), 20) from statsd  WHERE time >= now()-4h  GROUP BY time(1m) ORDER BY "time"`;
 // let statsd = `select median("vol") from statsd  WHERE time >= now()-4h  GROUP BY time(10s) ORDER BY "time"`;
+
+//https://v2.docs.influxdata.com/v2.0/query-data/flux/
+
+//myQuery();
