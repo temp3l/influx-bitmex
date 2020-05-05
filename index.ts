@@ -6,7 +6,7 @@ const { url, token, org, bucket } = process.env;
 const writeApi = new InfluxDB({ url, token, writeOptions: { batchSize: 1500, flushInterval: 1000 * 3 } }).getWriteApi(org, bucket);
 writeApi.useDefaultTags({ location: 'bitmex' }); //writeApi.close().then(() => console.log('Points flushed')).catch(console.log);
 
-//const history = fetchMex(writeApi);
+const history = fetchMex(writeApi);
 
 let foo = handleLiveData(writeApi);
 

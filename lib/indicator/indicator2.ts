@@ -44,12 +44,6 @@ export const MAs = (intervals: number[]) => {
   return _mas;
 };
 
-// const intervals = [1, 3, 5]; // 1m, 3m, 5m
-// const mas = MAs(intervals);
-// setInterval(() => {
-//   let stats = mas.push(Math.random() * 500); // sigle push
-//   console.log(stats);
-// }, 500);
 export const alert = (type) => {
   if (type === 'SHORT') exec('beep -l 100 -f 999');
   else if (type === 'LONG') exec('beep -l 100 -f 200');

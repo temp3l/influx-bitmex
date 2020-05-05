@@ -29,7 +29,7 @@ export const handleLiveData = async (writeApi) => {
 
   // Top 10 levels using traditional full book push
   // client.addStream('XBTUSD', 'orderBook10', (data, symbol, tableName) => {
-  //    onBookReplace({ data, symbol, tableName, writeApi });
+  //   onBookReplace({ data, symbol, tableName, writeApi });
   // });
 
   // Top level of the book

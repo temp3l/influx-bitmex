@@ -1,6 +1,5 @@
 import { Point } from '@influxdata/influxdb-client';
 import { MA, MAs, alert } from '../../indicator/indicator2';
-import { stat } from 'fs';
 const _ = require('lodash');
 const maAskVol = MA(5); // 5 minutes
 const maBidVol = MA(5); // 5 minutes
@@ -9,11 +8,10 @@ const MAS_ask_vol = MAs([5, 15, 60]); // 5m, 15m, 60m
 const MAS_bid_vol = MAs([5, 15, 60]); // 5m, 15m, 60m
 
 export const onBookReplace = ({ data, symbol, tableName, writeApi }: any) => {
-  const bucketSize = 5;
+  const bucketSize = 2;
   const book = { Buy: {}, Sell: {} }; // unmodified values
   //prettier-ignore
   let askVol = 0, bidVol = 0, hAsk = 0, lBid = 9999999999;
-
   data.forEach((bet, i) => {
     const { side, size, price } = bet;
     const rate = Math.ceil(price / bucketSize) * bucketSize;
