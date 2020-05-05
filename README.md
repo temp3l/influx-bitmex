@@ -49,3 +49,22 @@ token=".....=="
 org="de"
 bucket="bitmex"
 ```
+
+## Influx Dasboards
+
+- Data will be pumped to your influxdb
+
+![img](/docs/bitmex.png)
+
+## sample output 
+
+![img](/docs/bmex_bot.jpg)
+
+
+
+## Orderbot coming soon
+
+![img](/docs/bmex_orders.png)
+
+
+
