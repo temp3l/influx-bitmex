@@ -54,9 +54,12 @@ bucket="bitmex"
 
 - Data will be pumped to your influxdb
 
+![img](/docs/bitmex.png)
+
+## sample output 
+
 ![img](/docs/bmex_bot.jpg)
 
-![img](/docs/bitmex.png)
 
 
 ## Orderbot coming soon
