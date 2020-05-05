@@ -1,6 +1,6 @@
 import { InfluxDB, Point, HttpError, WritePrecision } from '@influxdata/influxdb-client';
-import { onBookReplace } from './lib/orderbook';
-const BitMEXClient = require('./index');
+import { onBookReplace } from './orderbook';
+const BitMEXClient = require('./bitmex-wss/index');
 
 export const handleLiveData = async (writeApi) => {
   const client = new BitMEXClient({ testnet: false });

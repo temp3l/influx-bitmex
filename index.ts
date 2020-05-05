@@ -1,7 +1,7 @@
 require('dotenv').config();
 import { InfluxDB, Point, HttpError, WritePrecision } from '@influxdata/influxdb-client';
 import { fetchMex } from './lib/bitmex-history';
-import { handleLiveData } from './lib/bitmex-wss/example';
+import { handleLiveData } from './lib/example';
 const { url, token, org, bucket } = process.env;
 const writeApi = new InfluxDB({ url, token, writeOptions: { batchSize: 1500, flushInterval: 1000 * 3 } }).getWriteApi(org, bucket);
 writeApi.useDefaultTags({ location: 'bitmex' }); //writeApi.close().then(() => console.log('Points flushed')).catch(console.log);

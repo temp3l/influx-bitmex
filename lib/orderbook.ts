@@ -1,5 +1,5 @@
 import { Point } from '@influxdata/influxdb-client';
-import { MA, MAs, alert } from '../../indicator/indicator2';
+import { MA, MAs, alert } from './indicator/indicator2';
 const _ = require('lodash');
 const maAskVol = MA(5); // 5 minutes
 const maBidVol = MA(5); // 5 minutes
