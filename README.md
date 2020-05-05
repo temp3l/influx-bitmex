@@ -54,7 +54,7 @@ bucket="bitmex"
 
 - Data will be pumped to your influxdb
 
-![img](/docs/bitmex_bot.jpg)
+![img](/docs/bmex_bot.jpg)
 
 ![img](/docs/bitmex.png)
 
