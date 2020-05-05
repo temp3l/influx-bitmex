@@ -1,6 +1,6 @@
 # Fomo Bot
 
-0. simple tracking of changes in the bitmex orderbook
+0. simple analysis of changes in the orderbook (compares current volumes and average-vol)
 
 1. Fetches historic trade/candle data from REST-API and saves them in influx-database
 
