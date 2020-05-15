@@ -50,11 +50,15 @@ yarn start
 # optional install: typescript and ts-node globally
 
 yarn global add typescript
-yarn global add ts-node
+yarn global add ts-node-dev
+
+# disabling livedata or REST in index.ts
+
+// const history = fetchMex(writeApi);
+// const live = handleLiveData(writeApi);
 
 ```
 
-- Setup influx 2.0 https://v2.docs.influxdata.com/v2.0/
 - create `.env` file
 
 ```bash
