@@ -35,8 +35,11 @@
 
 1. download & install influxdb from https://v2.docs.influxdata.com/v2.0/get-started/#start-with-influxdb-oss
 2. Set up InfluxDB through the UI: http://localhost:9999
+
   2.1. create an organisation called "de"
+  
   2.2. create a  bucket called "bitmex"
+  
   2.3. see https://v2.docs.influxdata.com/v2.0/get-started/#set-up-influxdb
   
 
