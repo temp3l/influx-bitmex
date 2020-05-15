@@ -31,12 +31,26 @@
   - ...
 - Guess: if all ask-values are below bid-values - it suggests: SHORT ...
 
+## Prequisits
+
+1. download & install influxdb from https://v2.docs.influxdata.com/v2.0/get-started/#start-with-influxdb-oss
+2. Set up InfluxDB through the UI: http://localhost:9999
+  - create an organisation called "de"
+  - create a  bucket called "bitmex"
+  - see https://v2.docs.influxdata.com/v2.0/get-started/#set-up-influxdb
+  
+
 ## Install
 
 ```bash
-yarn
 
-ts-node index.ts
+yarn
+yarn start 
+
+# optional install: typescript and ts-node globally
+
+yarn global add typescript
+yarn global add ts-node
 
 ```
 
