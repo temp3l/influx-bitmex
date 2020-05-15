@@ -1,3 +1,9 @@
+// this file only contains tests and samples
+// The indicators run analysis against arrays of data, like:
+//  let sma = new SMA({ period: 8, values: [1,2,3,4,5,6] });
+// we want to push data to that values array! and recalculate just "nexValue", like:
+//  results.push(sma.nextValue(7);
+// https://ecard.cadooz.com/frontend/ecard.do?id=dQCkQFUE9X5e60KIzSJz&sub=3rkzkz&c=
 const technicalIndicators = require('technicalindicators');
 technicalIndicators.setConfig('precision', 7);
 const { EMA, SMA, ema, sma } = technicalIndicators; // reversedInput : true

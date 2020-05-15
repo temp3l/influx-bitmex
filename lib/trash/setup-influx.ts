@@ -16,7 +16,6 @@ setupApi
           bucket,
           username,
           password,
-          token,
         },
       });
       console.log(`InfluxDB '${url}' is now onboarded.`);

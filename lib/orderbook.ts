@@ -1,11 +1,12 @@
+require('dotenv').config();
 import { Point } from '@influxdata/influxdb-client';
 import { MA, MAs, alert } from './indicator/indicator2';
 const _ = require('lodash');
 const maAskVol = MA(5); // 5 minutes
 const maBidVol = MA(5); // 5 minutes
-
 const MAS_ask_vol = MAs([5, 15, 60]); // 5m, 15m, 60m
 const MAS_bid_vol = MAs([5, 15, 60]); // 5m, 15m, 60m
+const { beep } = process.env;
 
 export const onBookReplace = ({ data, symbol, tableName, writeApi }: any) => {
   const bucketSize = 2;
@@ -79,7 +80,7 @@ const guess = ({ diff3, diffN, askVol, bidVol, askVolAvg, bidVolAvg }) => {
   let _signal = 'FLAT';
   if (diff3 < 0 && diffN < 0 && askVol < bidVol) _signal = 'SHORT';
   else if (diff3 > 0 && diffN > 0 && askVol > bidVol) _signal = 'LONG';
-  if (_signal !== signal) alert(_signal);
+  if (_signal !== signal && beep !== '0') alert(_signal);
   signal = _signal;
   return _signal;
 };

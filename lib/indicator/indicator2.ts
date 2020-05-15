@@ -1,7 +1,8 @@
 import { candler } from '../query';
 import { ADX, EMA, SMA, ema, sma, CrossDown, CrossUp } from 'technicalindicators'; //technicalIndicators.setConfig('precision', 7);
-const _MA = require('moving-average');
 import { exec } from 'child_process'; //screen: CTRL-A CTRL-G
+const _MA = require('moving-average');
+
 type InputType = {
   close: number[];
   high: number[];
@@ -69,7 +70,6 @@ const calcTrends = async ({ emas = [9, 20] }: { emas?: number[] }) => {
     if (f) ema_fast.push(Math.round(f));
     if (s) ema_slow.push(Math.round(s));
     input.close.push(close);
-    7;
     input.high.push(high);
     input.low.push(low);
   };
