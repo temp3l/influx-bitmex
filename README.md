@@ -31,7 +31,7 @@
   - ...
 - Guess: if all ask-values are below bid-values - it suggests: SHORT ...
 
-## Prequisits
+## Prerequisite
 
 1. download & install influxdb from https://v2.docs.influxdata.com/v2.0/get-started/#start-with-influxdb-oss
 2. Set up InfluxDB through the UI: http://localhost:9999
