@@ -66,6 +66,7 @@ url="http://localhost:9999"
 token=".....=="
 org="de"
 bucket="bitmex"
+beep=1
 ```
 
 ## Influx Dasboards
