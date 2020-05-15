@@ -1,4 +1,4 @@
-# Fomo Bot
+# Playground Fomo Bot
 
 0. simple analysis of changes in the orderbook (compares current volumes and average-vol)
 
