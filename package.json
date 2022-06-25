@@ -20,7 +20,7 @@
     "influxdb-v2": "^0.0.5",
     "lodash": "^4.17.15",
     "moving-average": "^1.0.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "superagent": "^5.2.2",
     "technicalindicators": "^3.1.0",
     "ws": "^7.3.0"
